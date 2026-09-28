@@ -1,4 +1,4 @@
-# Zomato Restaurant Market Analysis
+# Zomato Restaurant Business Analysis
 
 ![Python](https://img.shields.io/badge/Python-Data%20Analysis-blue)
 ![Pandas](https://img.shields.io/badge/Pandas-EDA-purple)
@@ -10,7 +10,7 @@
 
 ## 📊 Project Overview
 
-An end-to-end **Zomato Restaurant Market Analytics** case study combining **SQL, Python EDA and advanced business analysis** to understand restaurant performance, customer engagement, pricing, digital delivery adoption and city-level market opportunities.
+An end-to-end **Zomato Restaurant Business Analysis** case study combining **SQL, Python EDA and advanced business analysis** to understand restaurant performance, customer engagement, pricing, digital delivery adoption and city-level market opportunities.
 
 The project is structured as a continuation of the original SQL case study. The advanced EDA notebook extends the analysis from individual business questions into a broader analytical framework:
 
@@ -480,7 +480,7 @@ PHASE 2 – PYTHON EDA & ADVANCED ANALYSIS
 # 📂 Repository Structure
 
 ```text
-zomato-restaurant-analytics/
+Zomato Restaurant Business Analysis/
 │
 ├── README.md
 │
