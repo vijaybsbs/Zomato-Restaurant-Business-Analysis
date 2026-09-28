@@ -1,41 +1,56 @@
-# Zomato Restaurant Analytics
+# Zomato Restaurant Market Analysis
 
 ![Python](https://img.shields.io/badge/Python-Data%20Analysis-blue)
 ![Pandas](https://img.shields.io/badge/Pandas-EDA-purple)
 ![SQL](https://img.shields.io/badge/SQL-Analysis-blue)
 ![SQLite](https://img.shields.io/badge/SQLite-SQL%20Engine-lightgrey)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
+![Google%20Colab](https://img.shields.io/badge/Google%20Colab-Notebook-yellow)
 ![Status](https://img.shields.io/badge/Project-Completed-success)
 
 ## 📊 Project Overview
 
-An end-to-end **Restaurant Market Analytics** case study based on the Zomato restaurant dataset.
+An end-to-end **Zomato Restaurant Market Analytics** case study combining **SQL, Python EDA and advanced business analysis** to understand restaurant performance, customer engagement, pricing, digital delivery adoption and city-level market opportunities.
 
-The project combines **SQL analysis and Python Exploratory Data Analysis (EDA)** to transform restaurant-level data into business-focused insights across:
+The project is structured as a continuation of the original SQL case study. The advanced EDA notebook extends the analysis from individual business questions into a broader analytical framework:
 
-- Restaurant pricing
+**Data Understanding → Data Quality → SQL Business Analysis → Python EDA → Advanced Analysis → Segmentation → Market Opportunity → Business Insights → Recommendations**
+
+The analysis covers:
+
+- Restaurant pricing and price tiers
 - Ratings and customer engagement
 - Online delivery adoption
-- Table booking
-- Cuisine preferences
-- City-level restaurant markets
-- Value-for-money restaurants
+- Table booking and delivery availability
+- Cuisine popularity
+- Country and city restaurant distribution
 - Restaurant performance segmentation
-- Market opportunity analysis
-
-The project goes beyond isolated SQL queries by connecting:
-
-**Data Understanding → Data Quality → SQL Business Analysis → Python EDA → Advanced Analysis → Business Insights → Recommendations**
+- Value-for-money analysis
+- City-level market profiling
+- Correlation analysis
+- Premium vs value-oriented cities
+- Project-defined Market Opportunity Score
 
 ---
 
 ## 🚀 Project Resources
 
-### [▶ View Google Colab Notebook](https://colab.research.google.com/drive/1Xc73k_6tvUaSYy0BHkWq1IVnLd21QwYe?usp=sharing)
+### Google Colab
 
 
-## 🎯 Business Problem
+`[▶ View Google Colab Notebook](https://colab.research.google.com/drive/1Xc73k_6tvUaSYy0BHkWq1IVnLd21QwYe?usp=sharing)`
 
-The analysis is designed to answer practical business questions such as:
+### GitHub
+
+The repository contains the original SQL case study and the extended EDA & Advanced Analysis notebook.
+
+---
+
+# 🎯 Business Problem
+
+The objective is to use restaurant-level data to answer practical business questions around **restaurant performance, customer behaviour, pricing and market opportunities**.
+
+Key questions include:
 
 - Which restaurants are the most expensive?
 - Which restaurants offer strong value for money?
@@ -45,16 +60,17 @@ The analysis is designed to answer practical business questions such as:
 - Which restaurants offer delivery without table booking?
 - Which cuisines receive the highest customer engagement?
 - How do ratings, votes, pricing and delivery availability vary across restaurants?
-- Which cities have relatively higher or lower dining costs?
-- Which restaurant groups and markets may represent business opportunities?
+- How does customer engagement differ across cities and restaurants?
+- Which cities show different combinations of restaurant supply, demand, quality and delivery adoption?
+- Which markets may represent opportunities based on a project-defined analytical score?
 
-The objective is to demonstrate how restaurant data can be converted into **clear business insights and actionable recommendations**.
+The goal is to demonstrate not only technical SQL/Python skills, but also the ability to convert analysis into **business-oriented insights and recommendations**.
 
 ---
 
 # 📁 Dataset
 
-The dataset contains **9,551 restaurant records across 18 columns**.
+The Zomato dataset contains **9,551 restaurant records across 18 columns**, covering multiple countries and cities.
 
 | Metric | Value |
 |---|---:|
@@ -89,53 +105,17 @@ The dataset contains **9,551 restaurant records across 18 columns**.
 
 ---
 
-# 🧩 Data Quality & Analytical Considerations
+# 🧩 Phase 1 – SQL Business Case Study
 
-Data quality was evaluated before the business analysis.
-
-### Key checks
-
-- Dataset structure and data types
-- Missing values
-- Duplicate records
-- Zero ratings
-- Zero votes
-- Low-engagement restaurants
-- Distribution of ratings and votes
-- Cost outliers
-- Currency consistency
-
-### Key Findings
-
-- **9,551 records** are present.
-- No duplicate rows were identified.
-- No missing or zero ratings were identified in the current dataset.
-- **1,094 restaurants have zero votes.**
-- **2,148 restaurants have Rating <= 1.0 and Votes <= 3.**
-- Votes are highly skewed, with a median of approximately **31** compared with a mean of approximately **157**.
-- `Average_Cost_for_two` contains significant high-value observations.
-
-### Currency Consideration
-
-`Average_Cost_for_two` is reported in different currencies across countries.
-
-Therefore, direct international cost comparisons can be misleading.
-
-Cost-based analysis should be performed within the same country/currency or after conversion to a common currency.
-
----
-
-# 📌 SQL Business Case Study
-
-The original SQL case study focuses on eight core business questions.
+The original SQL analysis answers eight core business questions.
 
 ### Q1 – Most Expensive Restaurants
 
-Identify the top 10 restaurants based on average cost for two people, along with city and price range.
+Identify the top 10 restaurants based on average cost for two people, along with their locations and price tiers.
 
 ### Q2 – Rating & Vote Data Quality
 
-Identify restaurants with zero ratings, zero votes or null values in these fields.
+Identify restaurants with zero ratings, zero votes or null values in rating/vote fields.
 
 ### Q3 – Indian Restaurants Without Online Delivery
 
@@ -143,7 +123,7 @@ Identify Indian restaurants serving Indian cuisine that operate without online d
 
 ### Q4 – High-Performing, Budget-Friendly Restaurants
 
-Identify restaurants meeting:
+Identify restaurants meeting all three criteria:
 
 - Rating >= 4.5
 - Votes > 500
@@ -151,188 +131,294 @@ Identify restaurants meeting:
 
 ### Q5 – Online Delivery Adoption by City
 
-Identify cities with at least 10 restaurants and rank them by the percentage of restaurants offering online delivery.
+Identify cities with at least 10 listed restaurants and rank them by online-delivery adoption percentage.
 
 ### Q6 – Delivery Without Table Booking
 
-Identify the top cities with the highest number of restaurants that offer delivery but do not provide table booking.
+Identify cities with the highest number of restaurants that actively provide delivery but do not provide table booking.
 
 ### Q7 – Most Popular Cuisine by City
 
-For each city, identify the cuisine with the highest total customer votes and determine the highest-voted city-cuisine combination.
+Identify the cuisine with the highest total customer votes in each city and determine the highest-voted city/cuisine combination.
 
 ### Q8 – City-Level Dining Cost
 
-Identify cities where average dining cost is above the overall average and determine the city with the lowest average cost.
+Identify cities whose average dining cost exceeds the overall average and examine the lowest-cost city.
 
 ---
 
-# 🔎 Python Exploratory Data Analysis
+# 🔎 Phase 2 – EDA & Advanced Analysis
 
-The Python continuation extends the original SQL case study with:
+The **Zomato EDA & Advanced Analysis** notebook extends the original SQL case study with additional analysis from **Q9 onward**.
 
-1. Dataset profiling
-2. Data quality analysis
-3. Country distribution
-4. City distribution
-5. Rating distribution
-6. Price-range analysis
-7. Online-delivery adoption
-8. Customer engagement
-9. Cuisine analysis
-10. Correlation analysis
-11. Restaurant segmentation
-12. Value-for-money analysis
-13. City market profiling
-14. Market opportunity analysis
+`[▶ View Google Colab Notebook](https://colab.research.google.com/drive/188SNmUxsUd7XcYs_fepqCU9sghCcTDLN?usp=sharing)`
+
+## Q9 – Dataset Overview
+
+Establish the overall scale of the dataset by calculating:
+
+- Total restaurants
+- Total countries
+- Total cities
+- Total cuisine combinations
+
+This provides the baseline for interpreting subsequent analysis.
+
+## Q10–Q12 – Data Quality Analysis
+
+The advanced notebook evaluates:
+
+- Missing restaurant names, cities, cuisines, ratings, votes and cost values
+- Zero-rating restaurants
+- Zero-vote restaurants
+- Restaurants with either zero rating or zero votes
+- Duplicate Restaurant IDs
+
+The analysis highlights why data-quality checks should be completed before calculating restaurant-level KPIs.
+
+## Q13–Q14 – Restaurant Distribution
+
+Explore restaurant supply across:
+
+- Top countries by restaurant count
+- Top cities by restaurant count
+
+This helps identify where the dataset is concentrated and provides context for country- and city-level comparisons.
+
+## Q15–Q16 – Rating & Pricing Analysis
+
+Analyze:
+
+- Restaurant rating bands
+- Price range distribution in India
+- Average rating by price range
+- Average customer votes by price range
+- Average cost by price range
+
+This helps examine the relationship between restaurant pricing, customer engagement and ratings.
+
+## Q17–Q18 – Online Delivery Analysis
+
+Extend the delivery analysis by examining:
+
+- Top cities by online-delivery adoption
+- Online-delivery adoption across Indian price ranges
+
+The analysis helps identify markets and price segments with different levels of digital-ordering adoption.
+
+## Q19–Q20 – Customer Engagement Analysis
+
+Measure customer engagement using recorded restaurant votes through:
+
+- Top Indian cities by total votes
+- Average votes by city
+- Restaurant distribution across vote bands
+- Average rating across engagement bands
+
+Votes are treated as a **recorded engagement measure**, not as unique customers or orders.
+
+## Q21 – Cuisine Analysis
+
+Identify the cuisine combinations receiving the highest total customer votes and examine their average ratings.
+
+This provides a basis for understanding cuisine-level customer engagement.
 
 ---
 
-# 📈 Key Business Findings
+# 📈 Advanced Business Analysis
 
-## 1. India Dominates the Dataset
+## Correlation Analysis
 
-India represents approximately **90.59% of all restaurant records**.
+The notebook evaluates relationships between:
 
-**Business implication:** Overall dataset-level results are heavily influenced by the Indian restaurant market.
+- `Rating`
+- `Votes`
+- `Average_Cost_for_two`
+- `Price_range`
 
-## 2. Customer Engagement is Highly Concentrated
-
-| Metric | Value |
-|---|---:|
-| Mean Votes | **156.91** |
-| Median Votes | **31** |
-| Maximum Votes | **10,934** |
-
-The large difference between mean and median indicates that customer engagement is concentrated among a smaller group of restaurants.
-
-## 3. Zero-Vote Restaurants
-
-**1,094 restaurants have zero votes.**
-
-These restaurants have no recorded customer voting activity and may require additional visibility or customer-engagement initiatives.
-
-## 4. Low-Engagement, Low-Rating Restaurants
-
-**2,148 restaurants have Rating <= 1.0 and Votes <= 3.**
-
-This group should be treated separately when evaluating restaurant performance because customer engagement is extremely low.
-
-## 5. Ratings Show Wide Variation
-
-Ratings range from **1.0 to 4.9**, with a median of approximately **3.2**.
-
-## 6. Restaurant Cost Requires Careful Interpretation
-
-`Average_Cost_for_two` contains multiple currencies and significant high-value observations.
-
-Country-level or currency-normalized analysis is therefore more appropriate than directly comparing all restaurants globally.
+> Correlation measures association and does **not** establish causation.
 
 ---
 
-# 🧠 Advanced Analysis
+## 🏷️ Restaurant Performance Segmentation
 
-## Restaurant Performance Segmentation
+Restaurants in India are grouped into project-defined business segments using rating, votes and average cost.
 
-Restaurants are grouped using project-defined criteria based on:
-
-- Rating
-- Votes
-- Average cost
-
-Example segments:
+### Segments
 
 - **High Value Performer**
 - **Strong Performer**
 - **Average Performer**
 - **Needs Attention**
 
-> These are analytical categories created for this project and are not official Zomato classifications.
+The thresholds are explicitly defined within the project and are **not official Zomato classifications**.
+
+The segmentation converts individual restaurant records into business-oriented groups that can be used for analysis of promotion, discovery and customer acquisition opportunities.
+
+---
 
 ## 💰 Value-for-Money Analysis
 
-The analysis identifies restaurants combining:
+The advanced analysis identifies restaurants that combine:
 
-- High ratings
-- Strong customer engagement
-- Relatively affordable cost
+- Rating >= 4.5
+- Votes > 500
+- Average cost for two < 800
 
-## 🌍 City Market Profile
+The analysis is intended to identify restaurants that demonstrate a combination of **strong customer response and relatively affordable pricing**.
 
-Cities are compared using:
+---
+
+## 🌆 City-Level Market Profile
+
+The notebook creates a consolidated city-level view for Indian cities with at least 10 restaurants.
+
+Metrics include:
 
 - Restaurant count
 - Average rating
 - Average votes
-- Total votes
 - Average cost
-- Online-delivery adoption
+- Delivery restaurant count
+- Online-delivery percentage
+- Total votes
 
-## 🎯 Market Opportunity Score
-
-A project-defined **Market Opportunity Score** combines:
-
-- Delivery gap
-- Customer demand
-- Restaurant density
-- Average rating
-
-This is a portfolio analytical framework and **not an official Zomato metric**.
+This enables comparison of city markets across **supply, customer engagement, pricing, quality and digital adoption**.
 
 ---
 
-# 💡 Business Recommendations
+# 🎯 Project-Defined Market Opportunity Score
 
-### 1. Prioritize High-Opportunity Markets
+The project introduces a **Market Opportunity Score** to make the city analysis more decision-oriented.
 
-Cities with strong restaurant supply and customer engagement but comparatively lower online-delivery adoption can be investigated for potential delivery expansion.
+The score combines four components:
+
+| Component | Weight |
+|---|---:|
+| Delivery Gap | **30%** |
+| Customer Demand | **30%** |
+| Restaurant Density | **20%** |
+| Average Rating / Quality | **20%** |
+
+The calculation uses normalized city-level metrics and produces a project-defined score for comparing markets.
+
+> **Important:** The Market Opportunity Score is a portfolio analytical framework created specifically for this project. It is **not an official Zomato metric** and should not be treated as a validated commercial market-ranking model.
+
+A higher score represents a combination of **restaurant supply, recorded customer engagement, restaurant quality and room for greater online-delivery adoption** within the project's analytical framework.
+
+---
+
+# 🍽️ Advanced SQL Analysis
+
+The advanced notebook also demonstrates a window-function approach to identify the **most-voted cuisine in each city**.
+
+The workflow uses:
+
+1. City + cuisine aggregation
+2. Total vote calculation
+3. `ROW_NUMBER()` partitioned by city
+4. Selection of the highest-voted cuisine per city
+
+This demonstrates how SQL can move from simple aggregation to more advanced analytical patterns.
+
+---
+
+# 💎 Premium vs Value-Oriented Cities
+
+The project additionally profiles Indian cities based on average dining cost.
+
+### Premium-Oriented City Analysis
+
+Cities are ranked by higher average dining cost while also displaying:
+
+- Average rating
+- Average votes
+- Restaurant count
+
+### Value-Oriented City Analysis
+
+Cities are also examined from the lower-cost end using the same supporting metrics.
+
+This creates a framework for comparing **premium-oriented and value-oriented restaurant markets** without treating cost alone as a measure of restaurant quality.
+
+---
+
+# 💡 Business Insights & Recommendations
+
+The combined SQL and advanced EDA analysis supports several business-oriented observations:
+
+### 1. Evaluate Delivery Expansion Opportunities
+
+Cities with a meaningful restaurant base, customer engagement and lower online-delivery adoption can be investigated as potential areas for delivery expansion.
 
 ### 2. Promote Value-for-Money Restaurants
 
-Highly rated restaurants with strong customer engagement and affordable pricing can be highlighted through value-focused discovery and promotional campaigns.
+Restaurants combining strong ratings, meaningful customer engagement and relatively affordable pricing can be considered for value-focused discovery or promotional campaigns.
 
 ### 3. Personalize Cuisine Discovery
 
-City-level cuisine popularity can support restaurant recommendations, search ranking and cuisine-specific promotions.
+City-level cuisine popularity can support personalized cuisine discovery and city-specific recommendations.
 
 ### 4. Differentiate Premium and Value Markets
 
-Higher-cost markets can focus on premium dining experiences, while value-oriented markets can focus on affordability and delivery.
+Higher-cost markets and lower-cost markets can be analyzed differently when designing restaurant discovery, pricing and delivery strategies.
 
 ### 5. Improve Customer Engagement
 
-Restaurants with very low or zero votes may benefit from stronger visibility and customer-engagement initiatives.
+Restaurants with very limited recorded votes can be analyzed separately from highly engaged restaurants when evaluating performance.
 
-### 6. Monitor Online Delivery Adoption
+### 6. Monitor Digital Delivery Adoption
 
-Delivery adoption should be tracked alongside restaurant density, ratings and customer engagement.
+Online-delivery adoption should be evaluated together with restaurant supply, pricing, customer engagement and ratings rather than as an isolated metric.
 
-### 7. Strengthen Data Quality Controls
+### 7. Maintain Strong Data Quality Controls
 
-Low-engagement records, missing values and extreme cost observations should be identified before calculating business KPIs.
+Missing values, duplicate IDs, zero-engagement records and unusual cost observations should be checked before calculating business KPIs.
 
 ---
 
-# 🧮 SQL Analysis Framework
+# 🧮 Analytical Framework
 
 ```text
-01 – Data Understanding & Data Quality
-02 – Restaurant Pricing
-03 – Rating & Customer Engagement
-04 – Online Delivery
-05 – Table Booking & Delivery
-06 – Cuisine Analysis
-07 – City-Level Analysis
-08 – Python EDA
-09 – Restaurant Segmentation
-10 – Market Opportunity Analysis
-11 – Business Insights
-12 – Business Recommendations
+PHASE 1 – SQL BUSINESS CASE STUDY
+│
+├── Q1  Restaurant Pricing
+├── Q2  Rating & Vote Data Quality
+├── Q3  Indian Restaurants Without Online Delivery
+├── Q4  High-Performing Budget-Friendly Restaurants
+├── Q5  City-Level Delivery Adoption
+├── Q6  Delivery Without Table Booking
+├── Q7  Cuisine Popularity by City
+└── Q8  City-Level Dining Cost
+
+PHASE 2 – PYTHON EDA & ADVANCED ANALYSIS
+│
+├── Q9   Dataset Overview
+├── Q10  Missing Value Analysis
+├── Q11  Zero Rating & Vote Analysis
+├── Q12  Duplicate Restaurant ID Check
+├── Q13  Country Distribution
+├── Q14  City Distribution
+├── Q15  Rating Distribution
+├── Q16  Price Range Analysis
+├── Q17  City-Level Delivery Adoption
+├── Q18  Delivery by Price Range
+├── Q19  Customer Engagement by City
+├── Q20  Vote Band Analysis
+├── Q21  Cuisine Engagement Analysis
+├── Correlation Analysis
+├── Restaurant Segmentation
+├── Value-for-Money Analysis
+├── City Market Profile
+├── Market Opportunity Score
+├── Q26  Most Voted Cuisine by City
+├── Q27  Premium-Oriented Cities
+└── Q28  Value-Oriented Cities
 ```
 
-### Analytical Workflow
+### End-to-End Workflow
 
-**Raw Dataset → Data Validation → SQL Analysis → Python EDA → Advanced Analysis → Business Insights → Recommendations**
+**Raw Dataset → Data Validation → SQL Business Questions → Python EDA → Advanced Analysis → Segmentation → Market Opportunity Analysis → Business Insights → Recommendations**
 
 ---
 
@@ -342,38 +428,53 @@ Low-engagement records, missing values and extreme cost observations should be i
 |---|---|
 | **Python** | Data analysis and EDA |
 | **Pandas** | Data manipulation and analysis |
-| **SQLite** | SQL analysis within the Python notebook |
+| **SQLite** | SQL analysis inside the Python notebook |
 | **SQL** | Business-question analysis |
 | **Matplotlib** | Data visualization |
-| **Jupyter Notebook / Google Colab** | Development and presentation |
+| **Jupyter Notebook** | Notebook development |
+| **Google Colab** | Cloud notebook execution and sharing |
 | **GitHub** | Version control and portfolio presentation |
 
 ---
 
 # 🧠 Skills Demonstrated
 
-- Python
-- Pandas
-- SQL
-- SQLite
-- Data profiling
-- Data quality validation
-- Missing-value analysis
-- Duplicate detection
-- Aggregation
-- Filtering
-- Grouping
+### SQL
+
+- SELECT / WHERE / ORDER BY
+- GROUP BY and HAVING
+- Aggregations
+- CASE statements
 - Subqueries
 - CTEs
 - Window functions
+- `ROW_NUMBER()`
+- City and cuisine-level analysis
+
+### Python & EDA
+
+- Pandas
+- Dataset profiling
+- Data-quality validation
+- Missing-value analysis
+- Duplicate detection
+- Distribution analysis
+- Correlation analysis
+- Data segmentation
+- Business-oriented feature creation
+
+### Business Analytics
+
+- Restaurant performance analysis
 - Customer engagement analysis
-- Restaurant segmentation
 - Pricing analysis
-- Geographic analysis
-- Delivery analysis
-- EDA
-- Business storytelling
-- Business recommendations
+- Delivery adoption analysis
+- Cuisine analysis
+- Geographic market analysis
+- Value-for-money analysis
+- Market opportunity framework
+- Business insight generation
+- Recommendation development
 
 ---
 
@@ -389,45 +490,52 @@ zomato-restaurant-analytics/
 │
 ├── notebooks/
 │   ├── 01_Zomato_SQL_Case_Study.ipynb
-│   └── 02_Zomato_Python_EDA.ipynb
+│   └── 02_Zomato_Case_Study_Continuation_EDA_Advanced.ipynb
 │
 └── documentation/
     └── analysis_report.pdf
 ```
 
-> If the raw dataset is not included in GitHub, keep the `data/` section as a reference to the source dataset used for the analysis.
+If the raw dataset is not included in the public repository, the `data/` folder can be retained as a reference to the source dataset used for the analysis.
 
 ---
 
 # ⚠️ Analytical Limitations
 
 1. The dataset is a snapshot and does not provide historical restaurant performance trends.
-2. India represents the majority of the dataset.
-3. `Average_Cost_for_two` contains multiple currencies.
+2. The dataset contains multiple countries and currencies, so direct global cost comparisons can be misleading without currency normalization.
+3. India represents the majority of the dataset, so overall results are strongly influenced by the Indian restaurant market.
 4. Votes represent recorded engagement and should not automatically be interpreted as unique customers or orders.
 5. Correlation indicates association and does not establish causation.
 6. Restaurant segmentation thresholds are project-defined analytical rules.
-7. The Market Opportunity Score is a project-defined heuristic.
-8. Cost-based international comparisons require currency normalization.
-9. Business recommendations should be validated with operational, financial and historical data before implementation.
+7. The Market Opportunity Score is a project-defined heuristic and has not been presented as an official Zomato metric.
+8. City comparisons are restricted to markets meeting the analysis thresholds where specified, such as a minimum restaurant count of 10.
+9. Business recommendations should be validated using current operational, financial and historical data before implementation.
 
 ---
 
 # 📚 Portfolio Deliverables
 
-- SQL business case study
-- Python EDA notebook
-- Data quality analysis
-- Restaurant pricing analysis
+- SQL business case study — Q1 to Q8
+- Python EDA & Advanced Analysis — Q9 onward
+- Dataset profiling
+- Data-quality analysis
+- Restaurant and city distribution analysis
+- Rating and pricing analysis
+- Online-delivery analysis
 - Customer engagement analysis
-- Online delivery analysis
 - Cuisine analysis
-- City-level analysis
-- Restaurant segmentation
-- Market Opportunity Score
+- Correlation analysis
+- Restaurant performance segmentation
+- Value-for-money analysis
+- City market profiling
+- Project-defined Market Opportunity Score
+- Premium vs value-oriented city analysis
+- Advanced SQL using CTEs and window functions
 - Business insights
 - Business recommendations
 - GitHub documentation
+- Google Colab notebook
 
 ---
 
@@ -441,10 +549,8 @@ Data Analytics | SQL | Python | Pandas | Business Analytics
 
 ## ⭐ Project Summary
 
-This portfolio project demonstrates how restaurant data can be transformed into business insights using:
+This project demonstrates an end-to-end approach to restaurant market analytics using **SQL + Python + EDA + Advanced Analysis**.
 
-**SQL + Python + EDA + Business Analysis**
+Rather than stopping at individual SQL queries, the project progresses from **data validation and exploratory analysis to restaurant segmentation, city-level market profiling and a project-defined opportunity framework**.
 
-The focus is not only on writing queries, but on demonstrating the complete analytical process:
-
-**Understand the Data → Validate the Data → Ask Business Questions → Analyze → Interpret → Recommend**
+**Understand → Validate → Analyze → Segment → Compare → Interpret → Recommend**
