@@ -37,7 +37,6 @@ The analysis covers:
 
 ### Google Colab
 
-
 [▶ View Google Colab Notebook](https://colab.research.google.com/drive/1Xc73k_6tvUaSYy0BHkWq1IVnLd21QwYe?usp=sharing)
 
 ### GitHub
@@ -151,7 +150,7 @@ Identify cities whose average dining cost exceeds the overall average and examin
 
 The **Zomato EDA & Advanced Analysis** notebook extends the original SQL case study with additional analysis from **Q9 onward**.
 
-`[▶ View Google Colab Notebook](https://colab.research.google.com/drive/188SNmUxsUd7XcYs_fepqCU9sghCcTDLN?usp=sharing)`
+[▶ View Google Colab Notebook](https://colab.research.google.com/drive/188SNmUxsUd7XcYs_fepqCU9sghCcTDLN?usp=sharing)
 
 ## Q9 – Dataset Overview
 
