@@ -38,7 +38,7 @@ The analysis covers:
 ### Google Colab
 
 
-`[▶ View Google Colab Notebook](https://colab.research.google.com/drive/1Xc73k_6tvUaSYy0BHkWq1IVnLd21QwYe?usp=sharing)`
+[▶ View Google Colab Notebook](https://colab.research.google.com/drive/1Xc73k_6tvUaSYy0BHkWq1IVnLd21QwYe?usp=sharing)
 
 ### GitHub
 
