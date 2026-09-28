@@ -224,6 +224,25 @@ This provides a basis for understanding cuisine-level customer engagement.
 
 ---
 
+# 📊 Key Findings
+
+The analysis produced the following evidence-based findings from the dataset:
+
+- **India represents approximately 90.59% of the 9,551 restaurant records**, so overall dataset-level conclusions are strongly influenced by the Indian restaurant market.
+- Customer engagement is highly skewed: the dataset has approximately **157 mean votes, 31 median votes and 10,934 maximum votes**.
+- **1,094 restaurants have zero votes**, indicating no recorded customer voting activity.
+- **2,148 restaurants have Rating ≤ 1.0 and Votes ≤ 3**, representing a low-engagement group that should be interpreted separately from highly reviewed restaurants.
+- Higher price ranges show higher average ratings and recorded engagement in the analysis: **Price Range 1 averages 2.33 rating / 36 votes**, while **Price Range 4 averages 3.66 rating / 404 votes**.
+- **3,022 Indian restaurants serving Indian cuisine do not offer online delivery**, highlighting a measurable digital-adoption gap in the dataset.
+- Project-defined restaurant segmentation identifies four business groups based on rating, votes and affordability. The thresholds are analytical rules created for this project and are **not official Zomato classifications**.
+- The highest-voted city–cuisine combination in the analysis is **New Delhi — North Indian | Mughlai, with 27,951 total votes**.
+- The city-level analysis combines restaurant supply, ratings, customer engagement, pricing and online-delivery adoption to create a broader market profile.
+- The project-defined **Market Opportunity Score** combines delivery gap, customer demand, restaurant density and average rating; it is a portfolio analytical framework rather than an official Zomato metric.
+
+**Business interpretation:** The findings highlight differences in customer engagement, pricing, digital-delivery adoption and restaurant-market structure that can be investigated through targeted restaurant, city and cuisine-level analysis.
+
+---
+
 # 📈 Advanced Business Analysis
 
 ## Correlation Analysis
