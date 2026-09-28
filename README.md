@@ -509,9 +509,6 @@ Zomato Restaurant Business Analysis/
 ├── notebooks/
 │   ├── 01_Zomato_SQL_Case_Study.ipynb
 │   └── 02_Zomato_Case_Study_Continuation_EDA_Advanced.ipynb
-│
-└── documentation/
-    └── analysis_report.pdf
 ```
 
 If the raw dataset is not included in the public repository, the `data/` folder can be retained as a reference to the source dataset used for the analysis.
