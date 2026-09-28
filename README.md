@@ -424,11 +424,12 @@ PHASE 2 – PYTHON EDA & ADVANCED ANALYSIS
 ├── Q19  Customer Engagement by City
 ├── Q20  Vote Band Analysis
 ├── Q21  Cuisine Engagement Analysis
-├── Correlation Analysis
-├── Restaurant Segmentation
-├── Value-for-Money Analysis
-├── City Market Profile
-├── Market Opportunity Score
+├── Q21.A Correlation Analysis
+├── Q22 Restaurant Segmentation
+├── Q23 Restaurant Segmentation Summary
+├── Q24 Value-for-Money Analysis
+├── Q25 City Market Profile
+├── Q25.A Market Opportunity Score
 ├── Q26  Most Voted Cuisine by City
 ├── Q27  Premium-Oriented Cities
 └── Q28  Value-Oriented Cities
@@ -507,8 +508,8 @@ Zomato Restaurant Business Analysis/
 │   └── Zomato.xlsx
 │
 ├── notebooks/
-│   ├── 01_Zomato_SQL_Case_Study.ipynb
-│   └── 02_Zomato_Case_Study_Continuation_EDA_Advanced.ipynb
+│   ├── Zomato_SQL_Case_Study.ipynb
+│   └── Zomato_Case_Study_Continuation_EDA_Advanced.ipynb
 ```
 
 If the raw dataset is not included in the public repository, the `data/` folder can be retained as a reference to the source dataset used for the analysis.
