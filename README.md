@@ -39,8 +39,6 @@ The project progresses from the original SQL case study into a deeper analytical
 
 [▶ View Google Colab Notebook](https://colab.research.google.com/drive/1Xc73k_6tvUaSYy0BHkWq1IVnLd21QwYe?usp=sharing)
 
-[▶ View Google Colab Notebook](https://colab.research.google.com/drive/188SNmUxsUd7XcYs_fepqCU9sghCcTDLN?usp=sharing)
-
 ### Repository
 
 The repository contains the original SQL case study and the final **EDA & Advanced Analysis** notebook.
@@ -177,6 +175,10 @@ Identify cities whose average dining cost exceeds the overall average and examin
 ---
 
 # 🔬 Phase 2 – Python EDA & Advanced Analysis
+
+### Google Colab
+
+[▶ View Google Colab Notebook](https://colab.research.google.com/drive/188SNmUxsUd7XcYs_fepqCU9sghCcTDLN?usp=sharing)
 
 The final notebook extends the SQL case study from **Q9 onward**.
 
