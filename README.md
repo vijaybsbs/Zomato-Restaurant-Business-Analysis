@@ -37,9 +37,9 @@ The project progresses from the original SQL case study into a deeper analytical
 
 ### Google Colab
 
-> Add your Google Colab notebook link here when publishing the repository.
+[▶ View Google Colab Notebook](https://colab.research.google.com/drive/1Xc73k_6tvUaSYy0BHkWq1IVnLd21QwYe?usp=sharing)
 
-[▶ View Google Colab Notebook](YOUR_GOOGLE_COLAB_LINK)
+[▶ View Google Colab Notebook](https://colab.research.google.com/drive/188SNmUxsUd7XcYs_fepqCU9sghCcTDLN?usp=sharing)
 
 ### Repository
 
